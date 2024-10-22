@@ -1,8 +1,8 @@
 import style from "./screen.module.css";
-const Screen = () => {
+const Screen = ({ CalValue }) => {
   return (
     <>
-      <input type="text" className={style.screen} />
+      <input type="text" className={style.screen} value={CalValue} readOnly />
     </>
   );
 };

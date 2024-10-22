@@ -1,12 +1,12 @@
-function Buttons() {
+function Buttons({ onButtonClicked }) {
   let btn_nums = [
     "C",
     "(",
     ")",
     "/",
-    7,
-    8,
-    9,
+    "7",
+    "8",
+    "9",
     "x",
     "4",
     "5",
@@ -24,7 +24,9 @@ function Buttons() {
   return (
     <>
       {btn_nums.map((element) => (
-        <button key={element}>{element}</button>
+        <button key={element} onClick={() => onButtonClicked(element)}>
+          {element}
+        </button>
       ))}
     </>
   );

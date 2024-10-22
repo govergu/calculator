@@ -1,9 +1,9 @@
 import Buttons from "./btn_elements";
 import style from "./btn_container.module.css";
-function ButtonContainer() {
+function ButtonContainer({ onButtonClicked }) {
   return (
     <div className={style.btn_container}>
-      <Buttons></Buttons>
+      <Buttons onButtonClicked={onButtonClicked}></Buttons>
     </div>
   );
 }
